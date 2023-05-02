@@ -21,6 +21,26 @@
 * docker 설치하고 gurugio 유저를 docker라는 그룹에 추가함
 
 # 5-03: 9-10
+
+* 컨테이너 하나는 하나의 어플리케이션 프로세스이다
+* 각각의 리소스(시피유/메모리, 유저 ID, 네트워크, 호스트네임) 등을 분리해서 가지고있다.
+* 도커 호스트: 리눅스 커널을 가진 시스템
+* 도커 호스트에 도커 데몬을 설치/실햄 -> 도커가 실행될 수 있음
+* 도커 데몬 위에 컨테이너 실행
+
+* 컨테이너 image: base image layer(UUID / 1.23MB) + app source image layer (UUID / 2KB) + run app
+* container image consists of multi layers.
+* Each layer has UUID.
+* A container image is a file -> run that file -> container
+* Container image is READ-ONLY.
+
+```
+docker search nginx
+docker pull nginx:latest
+docker run -d --name web -p 80:80 nginx:latest
+```
+
+
 # 5-04: 11-12
 # 5-05: 13-14
 
