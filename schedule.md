@@ -55,6 +55,13 @@ docker run -d --name web -p 80:80 nginx:latest
 * CMD: a command or argument for ENTRYPOINT => optionable for docker command
 
 
+
+```
+docker build -t hellojs:latest .
+```
+* '.' -> base location is current directory
+
+
 # 5-05: 13-14
 
 # 5-08: 15-16
