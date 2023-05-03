@@ -42,6 +42,19 @@ docker run -d --name web -p 80:80 nginx:latest
 
 
 # 5-04: 11-12
+
+* Dockerfile: set of commands to build a container with Docker
+* Many instructions in Dockerfile
+* # comment
+* FROM: base image ===> SHOULD be first
+* COPY: copy file of host
+* ADD: copy tar/url
+* RUN: command to be ran upon base image
+* USER: change user
+* ENTRYPOINT: a command to be run when container starts => cannot be changed with docker command
+* CMD: a command or argument for ENTRYPOINT => optionable for docker command
+
+
 # 5-05: 13-14
 
 # 5-08: 15-16
