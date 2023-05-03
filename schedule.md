@@ -54,10 +54,10 @@ docker run -d --name web -p 80:80 nginx:latest
 * ENTRYPOINT: a command to be run when container starts => cannot be changed with docker command
 * CMD: a command or argument for ENTRYPOINT => optionable for docker command
 
-
-
 ```
 docker build -t hellojs:latest .
+docker login
+docker push hellojs:latest
 ```
 * '.' -> base location is current directory
 
