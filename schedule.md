@@ -64,6 +64,22 @@ docker push hellojs:latest
 
 # 5-05: 13-14
 
+* docker registry: 컨테이너 보관 창고? 컨테이너 이미지를 저장함
+* Docker Hub: hub.docker.com 공개 이미지 저장소
+* Private Registry: 사내 컨테이너 저장소
+
+```
+docker search [KEYWORD]
+```
+
+* Download "registry" container to create a private registry
+* MUST set private repository address when pushing/downloading container image
+
+```
+localhost:5000/ubuntu:18.04
+```
+
+
 # 5-08: 15-16
 # 5-09: 17-18
 # 5-10: 19-20
