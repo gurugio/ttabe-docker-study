@@ -81,6 +81,42 @@ localhost:5000/ubuntu:18.04
 
 
 # 5-08: 15-16
+
+image관리
+```
+docker search [option] <image name:tag>
+docker pull [option] <image:flag>
+docker images
+docker inspect [option] <image:flag>
+docker rmi [option] <image>
+
+```
+
+컨테이너 생성 관리
+```
+docker create --name webserver nginx
+docker start webserver
+docker ps
+docker inspect webserver
+docker stop webserver
+docker rm webserver
+```
+
+```
+docker run --name webserver -d nginx:1.14 = pull + create + start
+```
+
+컨테이너에서 실행중인 프로세스 확인
+```
+docker top webserver
+```
+
+```
+docker logs webserver 로그확인
+docker exec webserver /bin/bash 컨테이너안에서 쉘실행
+docker exec -it webserver /bin/bash
+```
+
 # 5-09: 17-18
 # 5-10: 19-20
 # 5-11: 21-22
