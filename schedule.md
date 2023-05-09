@@ -118,6 +118,56 @@ docker exec -it webserver /bin/bash
 ```
 
 # 5-09: 17-18
+
+* limit resources: cpu, memory, disk io
+
+```
+docker run [options]
+```
+
+* memory
+* --memory: max memory size eg) 512m
+* --memory 1g --memory-reservation 500m: 500메가 보장, 최대 1g
+* --memory-swap: 스왑 영역 사용, 디폴트는 메모리의 2배
+* --oom-kill-disable: oom killer가 죽이지못하게 보호
+
+
+cpu
+* --cpus: 최대 cpu core수 예) --cpus="1.5"
+* --cpu-share: 1024값이 시피유1개 사용하는 비율
+* --cpuset-cpus=0-4: 사용할 시피유
+
+block
+* --blkio-weight: 디폴트 500, 100~1000까지 선택
+* --device-read-bps, --device-write-bps: 초당 읽기/쓰기 제한 예) --device-write-bps /dev/vda:1mb
+* --device-read-iops, --device-write-iops: 초당 데이터 전송 = IOPS * 블럭크기
+
+docker monitoring
+* docker stat
+* docker events -f container=[NAME]
+* docker image -f container=[MAME]
+
+
+
 # 5-10: 19-20
 # 5-11: 21-22
 # 5-12: 23-25
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
